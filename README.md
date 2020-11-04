@@ -6,3 +6,6 @@
 
 ### Hexlet tests and linter status:
 ![Actions Status](/workflows/hexlet-check/badge.svg)
+
+### How it works
+[![asciicast](https://asciinema.org/a/NVuId7negezWVapCPOxlD3RqP.svg)](https://asciinema.org/a/NVuId7negezWVapCPOxlD3RqP)
