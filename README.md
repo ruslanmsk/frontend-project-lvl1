@@ -7,5 +7,10 @@
 ### Hexlet tests and linter status:
 ![Actions Status](/workflows/hexlet-check/badge.svg)
 
-### How it works
+## How it works
+
+### Even game
 [![asciicast](https://asciinema.org/a/NVuId7negezWVapCPOxlD3RqP.svg)](https://asciinema.org/a/NVuId7negezWVapCPOxlD3RqP)
+
+### Calc game
+[![asciicast](https://asciinema.org/a/JXl9vo3o3ZE96i3JuJRBfXoeg.svg)](https://asciinema.org/a/JXl9vo3o3ZE96i3JuJRBfXoeg)
