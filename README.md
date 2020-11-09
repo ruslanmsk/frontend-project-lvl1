@@ -1,9 +1,8 @@
+### Hexlet tests and linter status:
+![Actions Status](https://github.com/ruslanmsk/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f3f99e38f39eb84255c3/maintainability)](https://codeclimate.com/github/ruslanmsk/frontend-project-lvl1/maintainability)
 ![LINT](https://github.com/ruslanmsk/frontend-project-lvl1/workflows/LINT/badge.svg) 
 
-
-### Hexlet tests and linter status:
-![Actions Status](/workflows/hexlet-check/badge.svg)
 
 ## How it works
 
