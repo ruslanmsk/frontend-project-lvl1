@@ -1,8 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import generateGame from '../index.js';
+import generateRandomInteger from '../lib.js';
 
 export default () => {
-  const MAX_NUMBER_SIZE = 200;
   const title = 'What is the result of the expression?';
   const sign2Expression = {
     '*': (n1, n2) => n1 * n2,
@@ -10,12 +10,13 @@ export default () => {
     '-': (n1, n2) => n1 - n2,
   };
 
-  const getGamePair = () => {
-    const firstNumber = Math.floor(Math.random() * MAX_NUMBER_SIZE);
-    const secondNumber = Math.floor(Math.random() * MAX_NUMBER_SIZE);
+  const generateGamePair = () => {
+    const firstNumber = generateRandomInteger();
+    const secondNumber = generateRandomInteger();
 
     const signs = Object.keys(sign2Expression);
-    const randomSign = signs[Math.floor(Math.random() * signs.length)];
+    const randomSignsIndex = generateRandomInteger(0, signs.length - 1);
+    const randomSign = signs[randomSignsIndex];
 
     const question = `Question: ${firstNumber} ${randomSign} ${secondNumber}`;
     const answer = sign2Expression[randomSign](firstNumber, secondNumber);
@@ -24,5 +25,5 @@ export default () => {
     return pair;
   };
 
-  generateGame(title, getGamePair);
+  generateGame(title, generateGamePair);
 };

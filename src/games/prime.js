@@ -1,8 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import generateGame from '../index.js';
+import generateRandomInteger from '../lib.js';
 
 export default () => {
-  const MAX_NUMBER_SIZE = 200;
   const title = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const isPrime = (n) => {
@@ -17,8 +17,8 @@ export default () => {
     return true;
   };
 
-  const getGamePair = () => {
-    const number = Math.floor(Math.random() * MAX_NUMBER_SIZE);
+  const generateGamePair = () => {
+    const number = generateRandomInteger();
     const question = `Question: ${number}`;
 
     const isNumberPrime = isPrime(number);
@@ -28,5 +28,5 @@ export default () => {
     return pair;
   };
 
-  generateGame(title, getGamePair);
+  generateGame(title, generateGamePair);
 };
