@@ -1,25 +1,25 @@
 import { car, cdr } from '@hexlet/pairs';
 import promptly from 'promptly';
-import askName from './cli.js';
 
-const GAME_ROUND_COUNT = 3;
+const GAME_ROUNDS_COUNT = 3;
 
-export default async function generateGame(title, generateGamePair) {
-  const userName = await askName();
+export default async function generateGame(title, generateData) {
+  console.log('Welcome to the Brain Games!');
+  const userName = await promptly.prompt('May I have your name?');
+  console.log(`Hello, ${userName}!`);
 
   console.log(title);
 
-  for (let i = 0; i < GAME_ROUND_COUNT; i += 1) {
-    const pair = generateGamePair();
-    const question = car(pair);
-    const answer = String(cdr(pair));
+  for (let i = 0; i < GAME_ROUNDS_COUNT; i += 1) {
+    const gameData = generateData();
+    const question = car(gameData);
+    const answer = cdr(gameData);
 
-    console.log(question);
+    console.log(`Question: ${question}`);
 
     const userAnswer = await promptly.prompt('Your answer: ');
-    const isAnswerCorrect = userAnswer === answer;
 
-    if (isAnswerCorrect) {
+    if (userAnswer === answer) {
       console.log('Correct!');
     } else {
       console.log(
